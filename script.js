@@ -49,9 +49,6 @@ const checkWinner = () =>{
         if (pos1 != "" && pos2 != "" && pos3 != ""){
             if (pos1 === 'X' && pos2 === 'X' && pos3 === 'X'){
                 console.log("PlayerX is the winner")
-
-                
-
             }
             else if (pos1 === 'O' && pos2 === 'O' &&  pos3 === 'O'){ 
                 console.log("PlayerO is the winner")
