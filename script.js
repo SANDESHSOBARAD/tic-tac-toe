@@ -37,9 +37,11 @@ boxes.forEach( (box) =>{
     box.addEventListener('click', () =>{
         if (turnO){
             box.innerHTML = 'X'
+            box.style.color = 'red'
             turnO = false
         }else{
             box.innerHTML = 'O'
+            box.style.color = 'green'
             turnO = true
         }
         box.disabled = true
