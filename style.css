@@ -54,3 +54,26 @@ h1{
     background-color: aqua;
     font-weight: bold;
 }
+#newGame-btn{
+    height: 6vmin;
+    width: 15vmin;
+    color: black;
+    font-size: large;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(95, 194, 194);
+    font-weight: bold;
+}
+
+#message{
+    font-size: 5vmin;
+    color: rgb(196, 134, 20);
+}
+
+.winner{
+    height: 20vmin;
+}
+
+.hide{
+    display: none;
+}
