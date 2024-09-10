@@ -6,7 +6,7 @@ let msg = document.querySelector('#message')
 
 
 let turnO = true;   //playerX, playerO
-
+let count = 0;
 let winning_patterns = [
     [0,1,2],
     [3,4,5],
@@ -27,6 +27,12 @@ const playNewGame = () =>{
 
 newGame.addEventListener('click', () => playNewGame())
 
+const gameDraw = () => {
+    msg.innerText = `Game was a Draw, No Winner!`
+    winnerContainer.classList.remove("hide")
+    disableBoxes()
+}
+
 boxes.forEach( (box) =>{
     box.addEventListener('click', () =>{
         if (turnO){
@@ -37,6 +43,13 @@ boxes.forEach( (box) =>{
             turnO = true
         }
         box.disabled = true
+        count++;
+
+        let isWinner = checkWinner()
+
+        if(count=== 9 && !isWinner){
+            gameDraw()
+        }
 
         checkWinner()
     })
@@ -44,6 +57,7 @@ boxes.forEach( (box) =>{
 
 const resetGame = () => {
         turnO = true;
+        count = 0;
         enableBoxes()
 }
 
