@@ -70,8 +70,13 @@ h1{
     color: rgb(196, 134, 20);
 }
 
-.winner{
-    height: 20vmin;
+.winner-container{
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
 }
 
 .hide{
